@@ -1,32 +1,26 @@
 ---
-title: "aula1"
+title: "Recapitulando conceitos de deriva genética"
 author: "Diogo Meyer"
 date: "2/26/2019"
 output: html_document
 ---
 
-TESTE TESTE TESTE
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Conceitos de Deriva Genéica
 
-## R Markdown
+Nesse documento retomo alguns conceitos básicos de genética de populações, que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.
+ 
+1. Como a deriva genétiac impacta a variação dentro de populações? 
+2. Como impacta a variância entre elas? Como expressar isso de modo quantitativo?
+3. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela não ocorresse. Uma delas seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário, bastente extremo. Imagine uma população tivesse $N$ indivíduos diplóides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham exatamente dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética?
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Tamanho efetivo populacional
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
+## Taxa de heterozigose
 
-## Including Plots
+## Equilíbrio entre mutação e deriva e diversidade resultante
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
