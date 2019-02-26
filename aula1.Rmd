@@ -2,24 +2,59 @@
 title: "Recapitulando conceitos de deriva genética"
 author: "Diogo Meyer"
 date: "2/26/2019"
-output: html_document
+output: 
+ html_document:
+  toc: true
+  toc_float: true
+
 ---
 
-
-## Conceitos de Deriva Genéica
-
 Nesse documento retomo alguns conceitos básicos de genética de populações, que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.
- 
-1. Como a deriva genétiac impacta a variação dentro de populações? 
-2. Como impacta a variância entre elas? Como expressar isso de modo quantitativo?
-3. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela não ocorresse. Uma delas seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário, bastente extremo. Imagine uma população tivesse $N$ indivíduos diplóides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham exatamente dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética?
+
+
+## O que é deriva genética?
+
+1. Para começar, defina em suas próprias palavras o que é a deriva genética, e quais seus efeitos sobre a diversidade genética dentro de populações.
+
+2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela não ocorresse. Uma delas seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário, bastente extremo. Imagine uma população tivesse $N$ indivíduos diplóides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham exatamente dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? $ N^2 $ intxt
 
 ## Tamanho efetivo populacional
 
+A intensidade da deriva genética depende do tamanho efetivo populacional. Relembre o conceito de tamanho efetivo, e dê alguns exemplos de situações em que ele pode ser diferente do tamanho de censo de uma população. 
+
+### Gargalos genéticos
+
+Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos usar a mesma simulação de deriva que aquela usada acima, para estimar a trajetória temporal a diversidade genética no caso NUMERO. Porém, faça com que a cada 50 gerações o tamanho populacional seja reduzido para N=10 por uma geração. Analise a diversidade genética resultante. Qual o impacto desses garagalos sobre a diversidade genética sobre a diversidade na maior parte da trajetória das populações?
 
 ## Taxa de heterozigose
 
+O conceito de que a deriva leva a uma redução da diversidade genética é fundamental. 
+
+
 ## Equilíbrio entre mutação e deriva e diversidade resultante
+
+O processo de mutação introduz variabilidade genética nas populações. Uma forma quantitativa de expressar esse processo é através da fórmula para a mudança na taxa de heterozigose de uma geração para outra, numa população em que o único processo é o de mutação:
+
+$\Delta H_{\mu} = (1-H)2 \mu$ 
+
+(Tente desenvolver sua intuição sobre essa fórmula)
+
+Já a perda de diversidade por deriva genética é dada por:
+
+$\Delta H_N = \frac{H}{2N}$
+
+Como se comportará uma população em que esses dois processos estão operando simultaneaente? Uma forma de estudar isso é simplesmente modelar o efeito conjunto desses dois fatores:
+
+$\Delta H  = \frac{H}{2N} + (1-H)2 \mu$ 
+
+Use um programa de planilhas (ou outra linguage de programação, se preferir) para ilustrar a trajetória temporal da diversidade genética de uma população com os seguintes parâmetros: 
+
+$N=1000; \mu = 10^{-6}$; $H$ inicial $H=0.01$
+
+$N=1000; \mu = 10^{-6}$; $H$ inicial $H=0.1$
+
+$N=1000; \mu = 10^{-6}$; $H$ inicial $H=0.5$
+
 
 
 
