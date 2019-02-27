@@ -32,11 +32,15 @@ Baseado nesses resultados, como vcê prevê que será o impacto de gargalos na h
 
 Efeito de garagalo 5 indivíduos, a-la Hedrick.
 
+
+## Probabilidade de fixação de uma mutação
+
+Um importante resultado da teoria neutra é que, num modelo apenas com deriva, a chance de uma mutação se fixar depende apenas de sua frequência na população. Por essa lógica, mutações recém surgidas em populações grandes seriam mais "raras", e teriam menos chances de se fixar do que quando ocorrem em populações pequenas. A previsão é que as taxas de evolução (dada pela taxa com que mutações surgem e se fixam) deve ser maior em populações pequenas. Esse raciocínio está correto?
+
 ## Taxa de heterozigose
 
 O conceito de que a deriva leva a uma redução da diversidade genética é fundamental. 
 Flutuações demográficas, ex glaciações ou fatores antrópoicos, considerados possíveis facilitadores de mudanças. Como testar? Pq diversidade genética é fator de interesse?
-
 
 ## Equilíbrio entre mutação e deriva e diversidade resultante
 
