@@ -1,4 +1,3 @@
-# BIO0313
 Genética Evolutiva.
 
 Mateiral para dicussão em sala.
