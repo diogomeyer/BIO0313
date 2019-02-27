@@ -12,7 +12,7 @@ output:
 Neste documento retomo alguns conceitos básicos de genética de populações, que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.
 
 
-## O que é deriva genética??
+## O que é deriva genética?
 
 1. Para começar, defina em suas próprias palavras o que é a deriva genética, e quais seus efeitos sobre a diversidade genética dentro de populações.
 
