@@ -22,13 +22,20 @@ Neste documento retomo alguns conceitos básicos de genética de populações, q
 
 A intensidade da deriva genética depende do tamanho efetivo populacional. Relembre o conceito de tamanho efetivo, e dê alguns exemplos de situações em que ele pode ser diferente do tamanho de censo de uma população. 
 
+Para a lógica de Ne, cenário A e B são equivalentes. Ou seja, produzem mesmoa diversidade. Há razões para as quais você teria restrições a essa equivalência?
+
 ### Gargalos genéticos
 
 Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos usar a mesma simulação de deriva que aquela usada acima, para estimar a trajetória temporal a diversidade genética no caso NUMERO. Porém, faça com que a cada 50 gerações o tamanho populacional seja reduzido para N=10 por uma geração. Analise a diversidade genética resultante. Qual o impacto desses garagalos sobre a diversidade genética sobre a diversidade na maior parte da trajetória das populações?
 
+Baseado nesses resultados, como vcê prevê que será o impacto de gargalos na história evolutiva depops? Sua diversidade? Neutra ou selecionada?
+
+Efeito de garagalo 5 indivíduos, a-la Hedrick.
+
 ## Taxa de heterozigose
 
 O conceito de que a deriva leva a uma redução da diversidade genética é fundamental. 
+Flutuações demográficas, ex glaciações ou fatores antrópoicos, considerados possíveis facilitadores de mudanças. Como testar? Pq diversidade genética é fator de interesse?
 
 
 ## Equilíbrio entre mutação e deriva e diversidade resultante
@@ -45,17 +52,37 @@ $\Delta H_N = \frac{H}{2N}$
 
 Como se comportará uma população em que esses dois processos estão operando simultaneaente? Uma forma de estudar isso é simplesmente modelar o efeito conjunto desses dois fatores:
 
-$\Delta H  = \frac{H}{2N} + (1-H)2 \mu$ 
+
+Pode-se  usar a expressão para a mudança de H entre gerações:
+
+$$ H_{t+1} = H_t - (H_t / 2N) + (1-H_t)2 \mu $$ 
+
+Pode-se também usar fórmula para a diferença de H entre duas gerações:
+
+$$\Delta H  = \frac{H}{2N} + (1-H)2 \mu$$
+
 
 Use um programa de planilhas (ou outra linguage de programação, se preferir) para ilustrar a trajetória temporal da diversidade genética de uma população com os seguintes parâmetros: 
 
-$N=1000; \mu = 10^{-6}$; $H$ inicial $H=0.01$
-
-$N=1000; \mu = 10^{-6}$; $H$ inicial $H=0.1$
-
-$N=1000; \mu = 10^{-6}$; $H$ inicial $H=0.5$
+$N=500; \mu = 10^{-3}$; $H$ inicial $H=0.3$
+$N=500; \mu = 10^{-3}$; $H$ inicial $H=0.8$
 
 
+Faça uma simulação para um período total de 1500 gerações.
 
+
+t <- 1500
+res[1] <- 0.3
+u <- 10^-3
+
+
+
+# Deriva e teoria da coalescência
+
+https://phytools.shinyapps.io/coalescent-plot/
+
+Varie N, mantendo a simulação fixa em 20 gerações. Observe o efeito. Intui-se a relação entre o tempo até a coalescência de todas as amostras e o tamanho da população.
+
+Eu faço transição para pi
 
 
