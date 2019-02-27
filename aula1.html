@@ -232,14 +232,16 @@ div.tocify {
 <div id="tamanho-efetivo-populacional" class="section level2">
 <h2>Tamanho efetivo populacional</h2>
 <p>A intensidade da deriva genética depende do tamanho efetivo populacional. Relembre o conceito de tamanho efetivo, e dê alguns exemplos de situações em que ele pode ser diferente do tamanho de censo de uma população.</p>
+<p>Para a lógica de Ne, cenário A e B são equivalentes. Ou seja, produzem mesmoa diversidade. Há razões para as quais você teria restrições a essa equivalência?</p>
 <div id="gargalos-geneticos" class="section level3">
 <h3>Gargalos genéticos</h3>
 <p>Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos usar a mesma simulação de deriva que aquela usada acima, para estimar a trajetória temporal a diversidade genética no caso NUMERO. Porém, faça com que a cada 50 gerações o tamanho populacional seja reduzido para N=10 por uma geração. Analise a diversidade genética resultante. Qual o impacto desses garagalos sobre a diversidade genética sobre a diversidade na maior parte da trajetória das populações?</p>
+<p>Baseado nesses resultados, como vcê prevê que será o impacto de gargalos na história evolutiva depops? Sua diversidade? Neutra ou selecionada?</p>
 </div>
 </div>
 <div id="taxa-de-heterozigose" class="section level2">
 <h2>Taxa de heterozigose</h2>
-<p>O conceito de que a deriva leva a uma redução da diversidade genética é fundamental.</p>
+<p>O conceito de que a deriva leva a uma redução da diversidade genética é fundamental. Flutuações demográficas, ex glaciações ou fatores antrópoicos, considerados possíveis facilitadores de mudanças. Como testar? Pq diversidade genética é fator de interesse?</p>
 </div>
 <div id="equilibrio-entre-mutacao-e-deriva-e-diversidade-resultante" class="section level2">
 <h2>Equilíbrio entre mutação e deriva e diversidade resultante</h2>
@@ -249,11 +251,20 @@ div.tocify {
 <p>Já a perda de diversidade por deriva genética é dada por:</p>
 <p><span class="math inline">\(\Delta H_N = \frac{H}{2N}\)</span></p>
 <p>Como se comportará uma população em que esses dois processos estão operando simultaneaente? Uma forma de estudar isso é simplesmente modelar o efeito conjunto desses dois fatores:</p>
-<p><span class="math inline">\(\Delta H = \frac{H}{2N} + (1-H)2 \mu\)</span></p>
+<p>Pode-se usar a expressão para a mudança de H entre gerações:</p>
+<p><span class="math display">\[ H_{t+1} = H_t - (H_t / 2N) + (1-H_t)2 \mu \]</span></p>
+<p>Pode-se também usar fórmula para a diferença de H entre duas gerações:</p>
+<p><span class="math display">\[\Delta H  = \frac{H}{2N} + (1-H)2 \mu\]</span></p>
 <p>Use um programa de planilhas (ou outra linguage de programação, se preferir) para ilustrar a trajetória temporal da diversidade genética de uma população com os seguintes parâmetros:</p>
-<p><span class="math inline">\(N=1000; \mu = 10^{-6}\)</span>; <span class="math inline">\(H\)</span> inicial <span class="math inline">\(H=0.01\)</span></p>
-<p><span class="math inline">\(N=1000; \mu = 10^{-6}\)</span>; <span class="math inline">\(H\)</span> inicial <span class="math inline">\(H=0.1\)</span></p>
-<p><span class="math inline">\(N=1000; \mu = 10^{-6}\)</span>; <span class="math inline">\(H\)</span> inicial <span class="math inline">\(H=0.5\)</span></p>
+<p><span class="math inline">\(N=500; \mu = 10^{-3}\)</span>; <span class="math inline">\(H\)</span> inicial <span class="math inline">\(H=0.3\)</span> <span class="math inline">\(N=500; \mu = 10^{-3}\)</span>; <span class="math inline">\(H\)</span> inicial <span class="math inline">\(H=0.8\)</span></p>
+<p>Faça uma simulação para um período total de 1500 gerações.</p>
+<p>t &lt;- 1500 res[1] &lt;- 0.3 u &lt;- 10^-3</p>
+</div>
+<div id="deriva-e-teoria-da-coalescencia" class="section level1">
+<h1>Deriva e teoria da coalescência</h1>
+<p><a href="https://phytools.shinyapps.io/coalescent-plot/" class="uri">https://phytools.shinyapps.io/coalescent-plot/</a></p>
+<p>Varie N, mantendo a simulação fixa em 20 gerações. Observe o efeito. Intui-se a relação entre o tempo até a coalescência de todas as amostras e o tamanho da população.</p>
+<p>Eu faço transição para pi</p>
 </div>
 
 
