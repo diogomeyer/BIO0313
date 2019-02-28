@@ -9,22 +9,29 @@ output:
 
 ---
 
-Neste documento retomo alguns conceitos básicos de genética de populações, que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.
+Neste documento retomo alguns conceitos básicos de genética de populações, que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo. 
+
+Leia e tente responder às questões, e realizar os exercícios propostos. 
 
 
 ## O que é deriva genética?
 
-1. Para começar, defina em suas próprias palavras o que é a deriva genética, e quais seus efeitos sobre a diversidade genética dentro de populações.
+1. Para começar, defina em suas próprias palavras o que é a deriva genética, e quais seus efeitos sobre a diversidade genética dentro de populações, assim como sobre as diferenças entre populações.
 
-2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela não ocorresse. Uma delas seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário, bastente extremo. Imagine uma população tivesse $N$ indivíduos diplóides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham exatamente dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? $ N^2 $ intxt
+2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela não ocorresse. Uma dessas condições seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário, bastente extremo mas mais interessante. Imagine uma população tivesse $N$ indivíduos diplóides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham _exatamente_ dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? 
 
 ## Tamanho efetivo populacional
 
 A intensidade da deriva genética depende do tamanho efetivo populacional. Relembre o conceito de tamanho efetivo, e dê alguns exemplos de situações em que ele pode ser diferente do tamanho de censo de uma população. 
 
-Para a lógica de Ne, cenário A e B são equivalentes. Ou seja, produzem mesmoa diversidade. Há razões para as quais você teria restrições a essa equivalência?
+Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas. Você acha que é preciso dizer que elas são todas "equivalentes" do ponto de vista genético?
 
-### Gargalos genéticos
+![Populações com diferentes histórias demográficas. Em (A) a população mantém tamanho constante de 1818 indivíduos. Em (B) a população alterna fases de tamanho N=10,000 com outras, de igual duração, de  N=1,000. Em (C) alternam-se fases de N=5,000 e N=1,110. ](figs/gargalos.png)
+
+
+
+
+## Gargalos genéticos
 
 Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos usar a mesma simulação de deriva que aquela usada acima, para estimar a trajetória temporal a diversidade genética no caso NUMERO. Porém, faça com que a cada 50 gerações o tamanho populacional seja reduzido para N=10 por uma geração. Analise a diversidade genética resultante. Qual o impacto desses garagalos sobre a diversidade genética sobre a diversidade na maior parte da trajetória das populações?
 
@@ -71,17 +78,34 @@ Use um programa de planilhas (ou outra linguage de programação, se preferir) p
 $N=500; \mu = 10^{-3}$; $H$ inicial $H=0.3$
 $N=500; \mu = 10^{-3}$; $H$ inicial $H=0.8$
 
-
 Faça uma simulação para um período total de 1500 gerações.
 
 
-t <- 1500
-res[1] <- 0.3
-u <- 10^-3
+Se você souber usar R (implementando, por exemplo, no Rstudio), pode usar o seguinte código
 
+```
+# Função para calcular como H muda ao longo do tempo
 
+# Função que calcula mudança de H entre duas gerações
+H.prime <- function(H, N, u) { H - H/(2*N) + (1-H)*2*u}
 
-# Deriva e teoria da coalescência
+# Função que calcula H de equilíbrio
+H.eq <- function(N, u) {4*N*u / (4*N*u + 1)}
+
+res <- vector(); 
+t <- 1500 # número de gerações
+res[1] <- 0.2 # H inicial
+N <- 500 # Tamanho da população
+u <- 10^-3 # Taxa de mutação
+
+# Mostrar trajetória
+for(i in 2:t) {res[i] <- H.prime(res[i-1], N, u)}
+plot(res)
+abline(h=H.eq(N, u))
+
+```
+
+## Deriva e teoria da coalescência
 
 https://phytools.shinyapps.io/coalescent-plot/
 
