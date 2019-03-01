@@ -2,42 +2,42 @@
 title: "Biologia Evolutiva (BIO 0313)"
 author: "Diogo Meyer"
 date: "2/26/2019"
-output: 
- html_document:
-  toc: true
-  toc_float: true
-  number_sections: TRUE
-
-
+output:
+  pdf_document:
+    number_sections: yes
+    toc: yes
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_float: yes
 ---
 
 # Deriva, teoria neutra e tamanho efetivo populacional
 
-Neste documento retomo alguns conceitos básicos de genética de populações, que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.Leia e tente responder às questões, e realizar os exercícios propostos. 
+Neste documento retomo alguns conceitos que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.Leia e tente responder às questões.
 
 
 ## O que é deriva genética?
 
 1. Para começar, defina em suas próprias palavras o que é a deriva genética, e quais seus efeitos sobre a diversidade genética dentro de populações, assim como sobre as diferenças entre populações.
 
-2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela não ocorresse. Uma dessas condições seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário, bastente extremo mas mais interessante. Imagine uma população tivesse $N$ indivíduos diplóides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham _exatamente_ dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? 
+2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela _não ocorresse_. Uma dessas condições seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário possível, bastante extremo mas bem interessante. Imagine uma população tivesse $N$ indivíduos diploides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham _exatamente_ dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? 
 
-3. Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutras descritas por Hedrick no capítulo lido. Suponha que ao sequenciar um gene, você descobre que todos indivíduos são geneticamente idênticos. Um colega sugere que houve seleção atuando sobre aquele gene, que fixou uma versão favorável em todos indivíduos. Como distinguir entre essa hipótese seletiva e a alternativa, que é a de que essa espécie sofreu deriva genética intensa, assim explicando a baixa variação naquele gene?
+3. Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutas descritas por Hedrick no capítulo indicado. Suponha que ao sequenciar um gene, você descobre que todos indivíduos são geneticamente idênticos. Um colega sugere que houve seleção atuando sobre aquele gene, que fixou uma versão favorável em todos indivíduos. Como distinguir entre essa hipótese seletiva e a alternativa, que é a de que essa espécie sofreu deriva genética intensa, assim explicando a baixa variação naquele gene?
 
 ## Probabilidade de fixação de uma mutação
 
-Um importante resultado da teoria neutra é que, num modelo apenas com deriva, a chance de uma mutação se fixar depende apenas de sua frequência na população. Como você pode explicar esse resulatdo? Assumindo esse achado, mutações recém surgidas em populações grandes seriam mais "raras", e teriam menos chances de se fixar do que quando ocorrem em populações pequenas. A previsão seria então a de que as taxas de evolução (dada pela taxa com que mutações surgem e se fixam) deveriam ser maior em populações pequenas (pois as mutações recém surgidas tem uma chance maior de se fixar). Esse raciocínio está correto?
+Um importante resultado da teoria neutra é que, num modelo apenas com deriva, a chance de uma mutação se fixar depende apenas de sua frequência na população. Tente justificar esse resultado.
 
-
-
+Assumindo esse achado, mutações recém surgidas em populações grandes seriam mais "raras", e teriam menos chances de se fixar do que quando ocorrem em populações pequenas. A previsão seria então a de que as taxas de evolução (dada pela taxa com que mutações surgem e se fixam) deveriam ser maior em populações pequenas (pois as mutações recém surgidas tem uma chance maior de se fixar). Esse raciocínio está correto? Como a sua resposta influencia o desenvolvimento de testes sobre a validade da teoria neutra na natureza?
 
 ## Taxa de heterozigose e sua dinâmica
 
-A taxa de heterozigose é nossa medida da diversidade genética numa popoulação. Para um lócus bialélico, ela pode ser definida da seguinte forma:
+A taxa de heterozigose é a principal medida da diversidade genética numa população. Para um lócus bialélico, ela pode ser definida da seguinte forma:
 
 $$H = 2 f_A (1 - f_A) $$
 
-Onde $f_A$ é a frequência do alelelo $A$. O valor de $H$ pode ser interpretado como a probabilidade de amostrar dois alelos da população e eles serem diferentes entre si. 
+Onde $f_A$ é a frequência do alelo $A$. O valor de $H$ pode ser interpretado como a probabilidade de amostrar dois alelos da população e eles serem diferentes entre si. 
 
 A dinâmica temporal da mudança de $H$ sob deriva é dada por:
 
@@ -45,30 +45,34 @@ $$H_{t+1} = H_t (1 - \frac{1}{2N})$$
 
 Essa expressão deixa claro que, quanto menor o valor de N, maior será a redução de diversidade genética numa  população.
 
+A perda de diversidade por deriva genética de uma geração para outra, definida por  dada por
+$\Delta{_N}H= H_{t+1} - H_t$ é:
 
-Se a deriva fosse o único processo ocorrendo, o resultado seria a perda completa de variação numa população. Entretanto, o processo de mutação introduz variabilidade genética nas populações. Uma forma quantitativa de expressar esse processo é através da fórmula para a mudança na taxa de heterozigose de uma geração para outra, numa população em que o único processo é o de mutação:
+$$\Delta{_N}H  = -\frac{H}{2N}$$
+
+(O subscrito N ao lado do $\Delta$ serve para indicar que essa é a mudança em $H$ resultante da ação da deriva, que é uma função do tamanho populacional, simbolizado por $N$.)
+
+Se a deriva fosse o único processo ocorrendo, o resultado seria a perda completa de variação numa população. Entretanto, o processo de mutação introduz variabilidade genética nas populações. Uma forma quantitativa de expressar esse processo é através da fórmula para a taxa de heterozigose de uma geração em função da anterior, numa população em que o único processo é o de mutação:
+
+$$H_{t+1} = H_t + (1-H)2\mu$$
+
+Dessa expressão podemos também tirar a mudança entre gerações:
 
 $$\Delta_{\mu}H = (1-H)2 \mu$$ 
 
-(Tente desenvolver sua intuição sobre essa fórmula)
-
-Já a perda de diversidade por deriva genética é dada por:
-
-$$\Delta{_N}H  = \frac{H}{2N}$$
-
-(obtida rearranjando a expressão inicial para os efeitos de deriva)
+(Tente desenvolver sua intuição sobre essas fórmulas, e discuta os pressupostos associados.)
 
 Para quais valores de H a mudança causada por deriva será mais intensa? E para quais valores de H a mudança causada por mutação será mais intensa? 
 
-Vamos agora investiar como se comporta uma população em que esses dois processos estão operando simultaneaente. Uma forma de estudar isso é simplesmente modelar o efeito conjunto desses dois fatores. Para isso, vamos a expressão para a mudança de H entre gerações:
+Vamos agora investigar como se comporta uma população em que esses dois processos estão operando simultaneamente. Uma forma de estudar isso é modelar o efeito conjunto desses dois fatores. Para isso, vamos à expressão para a mudança de H entre gerações, que contempla os efeitos de deriva e seleção:
 
-$$ H_{t+1} = H_t - (H_t / 2N) + (1-H_t)2 \mu $$ 
+$$ H_{t+1} = H_t - \frac{H_t}{2N} + (1-H_t)2 \mu $$ 
 
 Pode-se também usar fórmula para a diferença de H entre duas gerações:
 
 $$\Delta H  = -\frac{H}{2N} + (1-H)2 \mu$$
 
-Use um programa de planilhas (ou outra linguage de programação, se preferir) para ilustrar a trajetória temporal da diversidade genética de uma população com os seguintes parâmetros: 
+Use um programa de planilhas (ou outra linguagem de programação, se preferir) para ilustrar a trajetória temporal da diversidade genética de uma população com os seguintes parâmetros: 
 
 $N=500; \mu = 10^{-3}$; $H$ inicial $H=0.3$
 $N=500; \mu = 10^{-3}$; $H$ inicial $H=0.8$
@@ -99,9 +103,9 @@ abline(h=H.eq(N, u))
 
 ```
 
-Repare que a trajetória de $H$ tende a se estabilizar após um tempo. Isso ocorre quando atinge-se um valor de $H$ para o qual o ganho de diversidade por mutação é exatamente equilibrado pela sua perda por deriva. Esse valor é chamado de taxa de heterozigose de equilíbrio ($H_{eq}$).
+Repare que a trajetória de $H$ tende a se estabilizar após um tempo. Isso ocorre quando atinge-se um valor de $H$ para o qual o ganho de diversidade por mutação é exatamente equilibrado pela sua perda por deriva. Esse valor é chamado de *taxa de heterozigose de equilíbrio* ($H_{eq}$).
 
-Para calcular $H_{e1}$ temos que achar o valor em que os efeitos de mutação e deriva tem a mesma magnitude, ou seja:
+Para calcular $H_{eq}$ temos que achar o valor em que os efeitos de mutação e deriva tem a mesma magnitude, ou seja:
 
 
  $$(1-H)2 \mu  -\frac{H}{2N} = 0 $$
@@ -122,9 +126,9 @@ Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma de
 
 ## Gargalos genéticos
 
-Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer à mesma simulação usada acima. Para visualizar o efeito de garagalos sobre a trajetória temporal da diversidade genética, faça com que em dois ou três momentos (ao longo das 1500 gerações) o tamanho populacional seja reduzido para N=5 por uma geração. Qual o impacto desses garagalos sobre a diversidade genética?
+Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer à mesma simulação usada acima. Para visualizar o efeito de gargalos sobre a trajetória temporal da diversidade genética, faça com que em dois ou três momentos (ao longo das 1500 gerações) o tamanho populacional seja reduzido para N=5 por uma geração. Qual o impacto desses gargalos sobre a diversidade genética?
 
-Baseado nesses resultados e em seu conhecimento sobre como diferentes espécies oscilam de tamanho ao longo do tempo, você acha que o tamanho efetivo de uma espécie, estimado a partir de dados genéticos, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecunidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
+Baseado nesses resultados e em seu conhecimento sobre como diferentes espécies oscilam de tamanho ao longo do tempo, você acha que o tamanho efetivo de uma espécie, estimado a partir de dados genéticos, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecundidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
 
 
 ## Deriva e teoria da coalescência
