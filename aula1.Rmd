@@ -3,13 +3,13 @@ title: "Biologia Evolutiva (BIO 0313)"
 author: "Diogo Meyer"
 date: "2/26/2019"
 output:
-  pdf_document:
-    number_sections: yes
-    toc: yes
   html_document:
     number_sections: yes
     toc: yes
     toc_float: yes
+  pdf_document:
+    number_sections: yes
+    toc: yes
 ---
 
 # Deriva, teoria neutra e tamanho efetivo populacional
@@ -136,5 +136,81 @@ Baseado nesses resultados e em seu conhecimento sobre como diferentes espécies 
 https://phytools.shinyapps.io/coalescent-plot/
 
 Varie N, mantendo a simulação fixa em 20 gerações. Observe o efeito. Intui-se a relação entre o tempo até a coalescência de todas as amostras e o tamanho da população. Vamos explorar mais essa simulação na próxima aula.
+
+# Seleção Natural e sua interação com deriva
+
+## Deriva e teoria da coalescência
+
+Antes de embarcar na discussão da seleção, vamos visualizar o processo de deriva sob outra ótica. A simulação abaixo gera gráficos em que a população evoluiu de acordo cojm um modelo Wright-Fisher, e as linhas de transmissão entre gerações são mostradas. 
+
+https://phytools.shinyapps.io/coalescent-plot/
+
+Use esse simulador para desenvolver uma intuição qualitativa sobre a relação entre o tamanho populacional ($N$) e o tempo necessário para que todas as amostras no momento atual (última fileira embaixo) sejam descendentes de um único ancestral comum que viveu no passado. 
+
+Para uma população de tamanho N=20, faça uma série de simulações em que um dos alelos na população original tenha se fixado, e registre o tempo necessário para isso. Em média, quantas gerações foram necessárias?
+
+
+
+## Modelo determinístico de seleção natural
+
+No texto "Theory of selection in populations", Kent Holsinger revisa o conceito básico de seleção natural e apresenta uma fórmula que prevê como a frequência de um alelo (dada por $p$) numa geração difere daquela da geração anterior, supondo que a seleção esteja ocorrendo. 
+
+Usando a fórmula (1) apresentada no texto e um programa de planilhas (ou uma linguagem de programação como R), mostre como uma mutação vantajosa aumenta de frequência ao longo do tempo (decida o número de gerações necessário para ilustrar o processo do modo mais claro). Vamos supor que o coeficiente de seleção associado à mutação seja de 0,05 (ou seja, s=0,05). Com esse valor é possível calcular o valor adaptativo de cada genótipo. Suponha que a frequência inicial da mutação é de 1% e faça seus cálculos para dois cenários, dados abaixo em (a) e (b).
+
+(a) A mutação é vantajosa e recessiva (a vantagem só se faz presente quando duas cópias da mutação estão presentes, ou seja $W_{AA}$ > $W_{Aa}$ e $W_{AA} > W_{aa}$)
+
+(b) A mutação é vantajosa e dominante (indivíduos heterozigotos para a mutação têm o mesmo valor adaptativo, ou seja $W_{AA} = W_{Aa}$, e ambos são maiores que $W_{aa}$)
+
+## Modelo de seleção que incorpora deriva
+
+Para contrastar o modelo determinístico de seleção natural com um que contempla tanto os efeitos de deriva e seleção, use um simulador escrito em R, disponível no seguinte site:
+
+https://phytools.shinyapps.io/drift-selection/
+
+Faça simulações para valores adaptativos de $W_{AA}=1,00; W_{Aa}=0,95; W_{aa}=0,90$, com frequência inicial do alelo em 0,05. Varie o tamanho da população e discuta o efeito sobre as trajetórias e as probabilidades de fixação da mutação vantajosa. O que acontece se você reduz a frequência inicial do alelo vantajoso para 0,01? De modo geral, a partir de quais combinações de tamanho populacional os afeitos estocásticos (introduzidos pela seleção) passam a dominar?
+
+## Probabilidade de fixação sob seleção e deriva genética
+
+Os padrões gerais vistos no exercício anterior foram investigados de modo analítico por J.B.S. Haldane (1982-1964) Motoo Kimura (1924-1994). Eles descobriram que a probabilidade de fixação de uma mutação vantajosa depende da intensidade de seleção que a favorece e também de sua frequência inicial. No caso especial em que a frequência inicial da mutação é $1/2N$ (o que equivale a dizer que ela está presente em uma só cópia, pois é "recém surgida", a fórmula é:
+
+$P= \frac{1 - e^{-2s}}{1 - e^{-4Ns}}$ que para valores de $s$ relativamente baixos e $N$ elevado se aproxima de $2s$.
+
+De posse desse resultado, considere uma mutação presente em uma única cópia, que ocorre numa população de tamanho N=1000. Contraste as probabildades de fixação de mutações de dois tipos:
+
+- uma mutação neutra;
+- uma mutação que confira uma vantagem de 1% (ou seja s=0,01). 
+
+Essa diferença faz sentido para você? Como a probabilidade de fixação no caso de seleção constrasta com o que vimos no modelo determinístico (em que não há deriva)?
+
+Agora imagine que essa mesma mutação vantajosa tivesse surgido numa população de tamanho N=50. Sua previsão para a diferença na probabilidade de fixação entre a mutação neutra e a vantajosa mudaria?
+
+## Usando simulações para testar a teoria
+
+Os resultados anteriores, referentes à probabilidade de fixação podem, ser testados usando simulações. Aliás, é uma prática comum em estudos de genética de populações comparar resultados teóricos com os simulados. Essa abordagem é poderosa, pois caso a teoria seja nova, obter os mesmos resultados que aqueles aqueles da simulação mostra que a teoria está funcionando. Por outro lado se o simulador é novo e a teoria já estabelecida, obter o mesmo resultado indica que o simulador foi programado corretamente.
+
+Nesse caso 
+
+Utiliza o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada.
+
+## Tempo até fixação
+
+Outro importante resultado teórico referente à trajetória de mutações diz respeito ao tempo médio que demora para uma mutação surgir e se fixar. Para uma mutação neutra o tempo médio até a fixação é $4N$ gerações. Já para mutações sob seleção, o tempo médio é dado por: $t_{fix} = 2ln(2N_es)$, onde o $ln$ refere-se ao logarítmo na base natural.
+
+Utilizando essas expressões, compare o tempo médio até a fixação de uma mutação vantajosa que surge numa população de N=1000 indivíduos com o tempo até a fixação para uma mutação que confere vantagem de 1% (ou seja, s=0,01), também numa população de N=1000. A diferença nesses tempos dá alguma ideia sobre como podemos buscar idetnficar regiões do genoma que estiveram sob os efeitos de seleção natural? 
+
+
+## Pressupostos do modelo de seleção
+
+O modelo de seleção natural que usamos em todas nossa modelagem nesta aula faz uma série de simplificações e assume uma série de pressupostos (isto é, condições que são necessárias para que o modelo possa funcionar). 
+
+Apresete esses pressupostos e valie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
+
+
+
+
+
+
+
+
 
 
