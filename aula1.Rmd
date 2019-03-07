@@ -141,7 +141,7 @@ Varie N, mantendo a simulação fixa em 20 gerações. Observe o efeito. Intui-s
 
 ## Deriva e teoria da coalescência
 
-Antes de embarcar na discussão da seleção, vamos visualizar o processo de deriva sob outra ótica. A simulação abaixo gera gráficos em que a população evoluiu de acordo cojm um modelo Wright-Fisher, e as linhas de transmissão entre gerações são mostradas. 
+Antes de embarcar na discussão da seleção, vamos visualizar o processo de deriva sob outra ótica. A simulação abaixo gera gráficos em que a população evoluiu de acordo com um modelo Wright-Fisher, e as linhas de transmissão entre gerações são mostradas. 
 
 https://phytools.shinyapps.io/coalescent-plot/
 
@@ -167,7 +167,7 @@ Para contrastar o modelo determinístico de seleção natural com um que contemp
 
 https://phytools.shinyapps.io/drift-selection/
 
-Faça simulações para valores adaptativos de $W_{AA}=1,00; W_{Aa}=0,95; W_{aa}=0,90$, com frequência inicial do alelo em 0,05. Varie o tamanho da população e discuta o efeito sobre as trajetórias e as probabilidades de fixação da mutação vantajosa. O que acontece se você reduz a frequência inicial do alelo vantajoso para 0,01? De modo geral, a partir de quais combinações de tamanho populacional os afeitos estocásticos (introduzidos pela seleção) passam a dominar?
+Faça simulações para valores adaptativos de $W_{AA}=1,00; W_{Aa}=0,95; W_{aa}=0,90$, com frequência inicial do alelo em 0,05. Varie o tamanho da população e discuta o efeito sobre as trajetórias e as probabilidades de fixação da mutação vantajosa. O que acontece se você reduz a frequência inicial do alelo vantajoso para 0,01? De modo geral, a partir de quais combinações de tamanho populacional e intensidade de seleção os afeitos estocásticos (introduzidos pela deriva) passam a dominar?
 
 ## Probabilidade de fixação sob seleção e deriva genética
 
@@ -175,7 +175,7 @@ Os padrões gerais vistos no exercício anterior foram investigados de modo anal
 
 $P= \frac{1 - e^{-2s}}{1 - e^{-4Ns}}$ que para valores de $s$ relativamente baixos e $N$ elevado se aproxima de $2s$.
 
-De posse desse resultado, considere uma mutação presente em uma única cópia, que ocorre numa população de tamanho N=1000. Contraste as probabildades de fixação de mutações de dois tipos:
+De posse desse resultado, considere uma mutação presente em uma única cópia, que ocorre numa população de tamanho N=1000. Contraste as probabilidades de fixação de mutações de dois tipos:
 
 - uma mutação neutra;
 - uma mutação que confira uma vantagem de 1% (ou seja s=0,01). 
@@ -186,28 +186,22 @@ Agora imagine que essa mesma mutação vantajosa tivesse surgido numa populaçã
 
 ## Usando simulações para testar a teoria
 
-Os resultados anteriores, referentes à probabilidade de fixação podem, ser testados usando simulações. Aliás, é uma prática comum em estudos de genética de populações comparar resultados teóricos com os simulados. Essa abordagem é poderosa, pois caso a teoria seja nova, obter os mesmos resultados que aqueles aqueles da simulação mostra que a teoria está funcionando. Por outro lado se o simulador é novo e a teoria já estabelecida, obter o mesmo resultado indica que o simulador foi programado corretamente.
+Os resultados anteriores, referentes à probabilidade de fixação, podem ser testados usando simulações. Aliás, é uma prática comum em estudos de genética de populações comparar resultados teóricos com os simulados. Essa abordagem é poderosa, pois caso a teoria seja nova, obter os mesmos resultados que aqueles aqueles da simulação mostra que a teoria está funcionando. Por outro lado se o simulador é novo e a teoria já estabelecida, obter o mesmo resultado indica que o simulador foi programado corretamente.
 
-Nesse caso 
-
-Utiliza o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada.
+Utilize o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada. Lembre de ajustar a frequência inicial do alelo para $1/2N$, que corresponde à condição de haver apenas uma cópia do alelo presente na população.
 
 ## Tempo até fixação
 
-Outro importante resultado teórico referente à trajetória de mutações diz respeito ao tempo médio que demora para uma mutação surgir e se fixar. Para uma mutação neutra o tempo médio até a fixação é $4N$ gerações. Já para mutações sob seleção, o tempo médio é dado por: $t_{fix} = 2ln(2N_es)$, onde o $ln$ refere-se ao logarítmo na base natural.
+Outro importante resultado teórico referente à trajetória de mutações diz respeito ao tempo médio que demora para uma mutação surgir e se fixar. Para uma mutação neutra o tempo médio até a fixação é $4N$ gerações. Já para mutações sob seleção, o tempo médio é dado por: $t_{fix} = \frac{2ln(2N_e)}{s}$, onde o $ln$ refere-se ao logaritmo na base natural.
 
-Utilizando essas expressões, compare o tempo médio até a fixação de uma mutação vantajosa que surge numa população de N=1000 indivíduos com o tempo até a fixação para uma mutação que confere vantagem de 1% (ou seja, s=0,01), também numa população de N=1000. A diferença nesses tempos dá alguma ideia sobre como podemos buscar idetnficar regiões do genoma que estiveram sob os efeitos de seleção natural? 
+Utilizando essas expressões, compare o tempo médio até a fixação de uma mutação *neutra* que surge numa população de N=1000 indivíduos com o tempo até a fixação para uma mutação que confere vantagem de 1% (ou seja, s=0,01), também numa população de N=1000. A diferença nesses tempos dá alguma ideia sobre como podemos buscar identificar regiões do genoma que estiveram sob os efeitos de seleção natural? 
 
 
-## Pressupostos do modelo de seleção
+## Pressupostos do modelo de seleção.
 
 O modelo de seleção natural que usamos em todas nossa modelagem nesta aula faz uma série de simplificações e assume uma série de pressupostos (isto é, condições que são necessárias para que o modelo possa funcionar). 
 
-Apresete esses pressupostos e valie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
-
-
-
-
+Apresente esses pressupostos e avalie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
 
 
 
