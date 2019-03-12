@@ -203,6 +203,45 @@ O modelo de seleção natural que usamos em todas nossas modelagem nesta aula fa
 
 Apresente esses pressupostos e avalie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
 
+# Adaptação é limitada pela disponibilidade de mutações?
+
+## Comentários e questões para ajudarem na leitura
+
+O artigo de Talia Karasov e colaboradores tem um tema geral, ao qual precisamos ficar atentos ao longo da leitura, para não nos perdermos nos (desafiantes!) detalhes metodológicos.
+
+Eles partem da premissa de que a cada geração há um "influxo" de mutações na população. Se em cada sítio do genoma há probabilidade de $\mu$ de ocorrer mutação, e há $2N_e$ cópias de cada gene, por estarmos estudando uma população diploide, o total de mutações que ingressa na população deve ser semelhante ao produto desses valores (depois discutiremos o fator de 2 em relação ao $4N_e\mu$).
+
+A intuição, portanto, é que populações maiores ou com maior taxa de mutação devem ter mais mutações disponíveis, sobre as quais a seleção natural pode atuar, gerando mudanças adaptativas.
+
+Então, para sabermos como populações ou espécies diferente em sua capacidade de se adaptar, seria útil medirmos $N_e\mu$. Como podemos fazer isso?
+
+Na primeira aula, vimos que a diversidade genética de uma população pode ser vista como o resultado do equilíbrio entre os processos de mutação e deriva (para mutações neutras), resultando num valor de $H$. Assim, podemos assumir que sabendo o $H$, que podemos medir, é possível calcular o valor de $N_e\mu$.
+
+Neste trabalho, bastante do enfoque é sobre a relação entre os valores de $N_e\mu$ estimados dessa maneira e a taxa com que a adaptação se dá. Os autores desconfiam que é difícil ocorrer muita evolução adaptativa, quando o $N_e$ é reduzido, pois haveriam poucas mutações com potencial adaptativo sendo geradas a cada geração. 
+
+Essa é a ideia geral. O desafio do artigo é transformá-la num estudo em que hipóteses são testadas!
+
+Alguns pontos para ficarem atentos na leitura:
+
+1. A análise filogenética dos haplótipos de resistência a inseticida motivam o trabalho. Busque compreender como ele sustenta a hipótese de que as mutações adaptativas podem ter surgido múltiplas vezes, de modo independente.
+
+2. O trabalho então investiga uma questão bem objetiva: seria possível a mutação adaptativa ter surgido independentemente em vários haplótipos? Para responder isso, é importante se ter uma ideia do "estoque de mutações disponível", que por sua vez depende do tamanho da população. Para Drosophila podemos estimar esse estoque, pois sabemos algo sobre seu $N_e$: estudos prévios com genes neutros estimaram um valor de $\Theta$ (que é só um outro jeito de descrever $4N\mu$) como sendo 0,01. Esse valor foi obtido usando a lógica que exploramos na primeira aula: de posse da diversidade genética de uma amostra, podemos perguntar qual tamanho populacional e taxa de mutação seria capazes de produzi-lo (afinal, a diversidade é determinada pela combinação desses dois fatores). O desafio então é perguntar se os tamanhos populacionais implicados por esse valor de $\Theta$ são compatíveis com o surgimento de mutações múltiplas vezes. Tente compreender se o $N_e$ de Drosophila parece compatível com a distribuição das mutações em múltiplos haplótipos.
+
+3. Tipicamente, quando pensamos no surgimento de uma mutação vantajosa e sua posterior fixação, estamos lindando com um cenário que os autores chama de "hard sweep", gera aquele efeito carona característico que já discutimos. Mas como modelar a evolução se as mutações vantajosas estão em vários haplótipos, e não num único?
+Uma forma de estudar o cenário em que as mutações surgem múltiplas vezes independente é através do conceito de  "soft sweeps". Leia com atenção o verbete da wikipedia (https://en.wikipedia.org/wiki/Selective_sweep) e entenda as principais diferenças entre sweeps "hard" e "soft". 
+
+4. Reparem que a mutação de resistência, na ausência de inseticidas, tem um valor adaptativo inferior à de ausência de resistência. Isso será usado na modelagem.
+
+
+5. Uma mesma mutação adaptativa pode estar presente em haplótipos diferentes por várias razões. Uma delas é o processo de recombinação. Tente entender (e para a discussão, produzir algum esquema ilustrativo) a forma como a recombinação poderia gerar o padrão observado, e a forma como os autores fizeram análises quantitativas para testar essa hipótese.
+
+6. O trabalho faz uma série de simulações. Tente compreender exatamente o que elas estão testando, e o que está sendo variado entre elas.
+
+7. Na discussão, há bastante ênfase sobre os poderes e os limites do tamanho efetivo populacional. Relembre a fórmula para tamanho efetivo no caso de uma população que muda de tamanho, discutindo de que forma seu tamanho de censo atual pode ser marcantemente diferente do seu tamanho efetivo. 
+
+
+
+
 
 
 
