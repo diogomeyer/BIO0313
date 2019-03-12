@@ -12,7 +12,7 @@ output:
     toc: yes
 ---
 
-# Deriva, teoria neutra e tamanho efetivo populacional
+# Deriva, teoria neutra e tamanho efetivo populacional.
 
 Neste documento retomo alguns conceitos que serão fundamentais no restante do curso. Para cada conceito, apresento perguntas que devem ser discutidas em grupo.Leia e tente responder às questões.
 
@@ -237,7 +237,7 @@ Uma forma de estudar o cenário em que as mutações surgem múltiplas vezes ind
 
 6. O trabalho faz uma série de simulações. Tente compreender exatamente o que elas estão testando, e o que está sendo variado entre elas.
 
-7. Na discussão, há bastante ênfase sobre os poderes e os limites do tamanho efetivo populacional. Relembre a fórmula para tamanho efetivo no caso de uma população que muda de tamanho, discutindo de que forma seu tamanho de censo atual pode ser marcantemente diferente do seu tamanho efetivo. 
+7. Na discussão, há bastante ênfase sobre os poderes e os limites do tamanho efetivo populacional. Relembre a fórmula para tamanho efetivo no caso de uma população que muda de tamanho, discutindo de que forma seu tamanho de censo atual pode ser marcantemente diferente do seu tamanho efetivo.
 
 
 
