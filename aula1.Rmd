@@ -241,7 +241,7 @@ Uma forma de estudar o cenário em que as mutações surgem múltiplas vezes ind
 
 
 
-## Questões para discussãom sala de aula.
+## Questões para discussão em sala de aula.
 
 ### Tamanho efetivo populacional e a taxa de adaptação
 
@@ -278,5 +278,35 @@ Considere uma população hipotética (apresentada como exemplo no paper) que al
 É recorrente a estratégia de estimarmos o tamanho efetivo de uma população a partir dos dados genéticos. Esse tipo de abordagem está "errado"? Você, após a leitura do paper, seria crítica ao uso do conceito de tamanho efetivo populacional?
 
 Por fim, considere um paradoxo associado ao tamanho efetivo: o tamanho populacional grande de uma população, que ocorre em certas fases de sua existência, induz pesquisadores a acharem que ela na verdade possui um tamanho populacional muito menor do eu que realmente tem. Concorda?
+
+# O efeito do sexo e da recombinação sobre a dinâmica da evolução molecular (McDonald et al., 2016)
+
+## Material para discussão em sala
+
+### O desafio teórico apresentado pela existência do sexo.
+
+Para iniciar nossa discussão é fundamental fazer uma breve recapitulação sobre a razão pela qual o sexo é uma questão ainda não resolvida para evolucionistas. Discuta as razões pelas quais sua ampla distribuição filogenética é surpreendente, suas importantes desvantagens e as possíveis vantagens. Discuta a ideia de "ruby in the rubbish" e "clonal interference" na sua apresentação, pois são aspectos centrais da reprodução assexual.
+
+### O experimento, formas de reprodução sexual em leveduras.
+
+Antes de mergulharmos na discussão evolutiva, precisamos entender o protocolo experimental. De que forma será feita a comparação entre sexuais e assexuais em leveduras? Como o ciclo de vida das leveduras ocorre, e como isso ajuda no desenvolvimento do teste proposto. Use a figura do suplemento para descrever a estratégia geral, inclusive as etapas de seleção para ploidia e controles para efeitos confundidores. O que esse estudo faz que supera os estudos anteriores?
+
+### Efeito de sexo sobre fitness
+
+A primeira rodada de resultados está na figura 1, descrevendo mudanças de fitness e o perfil molecular de mudanças genéticas. Discuta esses achados e suas implicações para vantagens do sexo. Como mudanças em fitness foram medidas?
+
+### Seguindo a trajetória de mutações específicas
+
+O que a trajetória de mutações específicas ao longo do tempo (Figura 2) revela sobre diferenças evolutivas entre formas sexuais e assexuais? Para essa análise, as frequências das mutações foram medidas. Como isso foi feito? Como foi feito o teste estatístico para comparar sexuais e assexuais (figuras 2i,j,k)?
+
+
+### Medindo o fitness de mutações específicas
+
+Posteriormente, valores adaptativos foram atribuídos a mutações individuais. Como isso foi feito? O que as trajetórias de mutações individuais (com valores adaptativos conhecidos) revela, conforme ilustrado na figura 3? Referente aos processos previstos para acontecerem em populações assexuais (ruby in the rubbish, carona, clonal interference), você acha que o estudo teve sucesso em mostrar quais ocorrem?
+
+### Desafios
+
+A interpretação dos principais achados envolve alguns desafios. Há fatores diferentes dos efeitos do sexo e da recombinação talvez possam explicar a diferença de dinâmicas entre populações sexuais e assexuais. Os autores identificam dois: diferenças entre o tamanho efetivo populacional entre as linhagens e o possível efeito da epistasia. Identifique no texto onde essas questões são levantadas e de que forma os autores trataram delas.
+
 
 
