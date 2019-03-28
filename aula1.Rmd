@@ -293,7 +293,7 @@ Antes de mergulharmos na discussão evolutiva, precisamos entender o protocolo e
 
 ### Efeito de sexo sobre fitness
 
-A primeira rodada de resultados está na figura 1, descrevendo mudanças de fitness e o perfil molecular de mudanças genéticas. Discuta esses achados e suas implicações para vantagens do sexo. Como mudanças em fitness foram medidas?
+A primeira rodada de resultados está na figura 1, descrevendo mudanças de fitness e o perfil molecular de mudanças genéticas. Discuta esses achados e suas implicações para vantagens do sexo. Como mudanças em fitness foram medidas? De que forma a comparação de variabilidade total e de fixações (figura 1b) contribui para a interpretação dos resultados?
 
 ### Seguindo a trajetória de mutações específicas
 
@@ -302,11 +302,34 @@ O que a trajetória de mutações específicas ao longo do tempo (Figura 2) reve
 
 ### Medindo o fitness de mutações específicas
 
-Posteriormente, valores adaptativos foram atribuídos a mutações individuais. Como isso foi feito? O que as trajetórias de mutações individuais (com valores adaptativos conhecidos) revela, conforme ilustrado na figura 3? Referente aos processos previstos para acontecerem em populações assexuais (ruby in the rubbish, carona, clonal interference), você acha que o estudo teve sucesso em mostrar quais ocorrem?
+Posteriormente, valores adaptativos foram atribuídos a mutações individuais. Como isso foi feito? O que as trajetórias de mutações individuais (com valores adaptativos conhecidos) revela, conforme ilustrado na figura 3? Referente aos processos previstos para acontecerem em populações assexuais (clonal interference), você acha que o estudo teve sucesso em mostrar quais ocorrem?  
 
 ### Desafios
 
 A interpretação dos principais achados envolve alguns desafios. Há fatores diferentes dos efeitos do sexo e da recombinação talvez possam explicar a diferença de dinâmicas entre populações sexuais e assexuais. Os autores identificam dois: diferenças entre o tamanho efetivo populacional entre as linhagens e o possível efeito da epistasia. Identifique no texto onde essas questões são levantadas e de que forma os autores trataram delas.
+
+# Determinantes da diversidade genética em animais
+
+Discussão de Romiguier e colaboradores, 2014.
+ 
+Nossa discussão de hoje terá como foco três questões mais gerais, que tocam em temas amplos relacionados ao artigo. Cada grupo deverá redigir uma resposta para a questão, sendo o mais preciso possível, e explorando ideias para além do conteúdo imediato do artigo. Para cada questão vamos comparar as respostas de dois grupos, com um terceiro comentando as diferenças  e intermediando a discussão. Ao longo da discussão eu irei tirar dúvidas técnicas específicas sobre as análises do artigo, conforme necessário.
+
+## Tema 1: Porque isso importa?
+
+O texto todo gira em torna da compreensão do que determina a diversidade genética de populações naturais. Se há tanto esforço investido nessa questão, é de se supor que ela é importante e tem impacto em diversos aspectos do conhecimento biológico (tanto teóricos como aplicados, por exemplo, ligados à conservação). Dê sua opinião sobre a importância (ou desimportância) de compreender quanta variabilidade genética há em diferentes espécies. Serão comparadas as respostas dos grupos  **G1** e **G2**, **G3** comenta.
+
+
+## Tema 2: "Afinal, o que é "diversidade"?
+
+"Diversidade" é algo que pode ser quantificado de várias formas, usando várias ferramentas e métodos quantitativos. Pense em diferentes formas de quantificar "diversidade" de uma espécie que poderiam ter sido usadas nesse tipo de estudo. Como essas abordagens diferem daquela usada pelos autores do artigo que lemos? Será que resultados diferentes seria obtidos para outros "tipos de diversidade"?  Serão comparadas as respostas dos grupos **G3** e **G4**, **G5** comenta.
+
+## Tema 3: O que explica a diversidade: "História de vida ou eventos históricos?" 
+Claramente há duas classes de fatores que podem moldar a diversidade genética de populações: eventos históricos e aspectos de história de vida. Qual desses importa mais? Essa não é uma questão trivial de responder, e no fundo é o tema central do estudo que lemos. Sua tarefa será debater com outro grupo, argumentando a favor da importância de um desses pontos. Sua argumentação deve contemplar os seguintes aspectos: (a) como medir a ocorrência/efeito desse tipo de evento; (b) o que leva você a crer (ou que tipo de dado você gostaria de gerar) para mostrar que ele é um tipo de evento com importância em populações naturais. 
+
+**G5** defenderá o papel de eventos históricos e **G6** defenderá o papel de características de história de vida.
+
+É claro que o paper lido apoia um desses pontos de vista, mas o G5 pode usar possíveis problemas com a linha de argumentação para sustentar seu ponto, assim como questionamentos quanto à sua generalidade.
+ 
 
 
 
