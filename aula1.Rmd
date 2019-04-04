@@ -319,7 +319,7 @@ Nossa discussão de hoje terá como foco três questões mais gerais, que tocam 
 O texto todo gira em torna da compreensão do que determina a diversidade genética de populações naturais. Se há tanto esforço investido nessa questão, é de se supor que ela é importante e tem impacto em diversos aspectos do conhecimento biológico (tanto teóricos como aplicados, por exemplo, ligados à conservação). Dê sua opinião sobre a importância (ou desimportância) de compreender quanta variabilidade genética há em diferentes espécies. Serão comparadas as respostas dos grupos  **G1** e **G2**, **G3** comenta.
 
 
-## Tema 2: "Afinal, o que é "diversidade"?
+## Tema 2: "Afinal, o que é ``diversidade'?
 
 "Diversidade" é algo que pode ser quantificado de várias formas, usando várias ferramentas e métodos quantitativos. Pense em diferentes formas de quantificar "diversidade" de uma espécie que poderiam ter sido usadas nesse tipo de estudo. Como essas abordagens diferem daquela usada pelos autores do artigo que lemos? Será que resultados diferentes seria obtidos para outros "tipos de diversidade"?  Serão comparadas as respostas dos grupos **G3** e **G4**, **G5** comenta.
 
@@ -330,6 +330,49 @@ Claramente há duas classes de fatores que podem moldar a diversidade genética 
 
 É claro que o paper lido apoia um desses pontos de vista, mas o G5 pode usar possíveis problemas com a linha de argumentação para sustentar seu ponto, assim como questionamentos quanto à sua generalidade.
  
+# Como a seleção molda a diversidade genética neutra
+
+**Discussão de Corbett-Detig e colaboradores, "Natural Selection Constrains Neutral Diversity across A Wide Range of Species".**
+
+Vamos começar a aula com um quizz para revisar os conceitos básicos:
+Integral: https://forms.gle/pvbcj37fPYr6p9kf9
+
+Para cada questão a seguir, um grupo deve oferecer uma resposta, e outro deve comentá-la. Para fazer um bom comentário, o grupo escolhido terá que também propor a sua resposta (também por escrito) para então ler a do outro grupo e apontar diferenças, semelhanças e eventuais discordâncias. O grupo que deu a resposta original então poderá fazer uma réplica.
+
+## Tema 1. O experimento: desafios, pressupostos. 
+
+**G6 responode, G1 comenta.**
+
+O estudo de Corbett-Detig e colaboradores é complexo. Ele envolve camadas de análise de dados e interpretações, envolvendo dados genômicos, ecológicos, genéticos (recombinação, mutação), uso de modelos estatísticos, entre outros. 
+
+É natural que você, como leitor, fique em alguns momentos com uma pulga atrás da orelha sobre algum pressuposto que ele fez ou dado que utilizou. Afinal, erros ou problemas com esses dados ou pressupostos, poderiam tornar a conclusão principal inválida.
+
+Como é comum em artigos científicos, os autores tentam se antecipar a essas possíveis críticas e fornecer argumentos para sustentar que os seus achados são robustos. Por "robustos" (palavra que aparece sete vezes ao longo do texto!) eles querem dizer que os seus achados não foram influenciados por decisões equivocadas na hora de coletar e processar os dados.
+
+A sua tarefa é revisar o paper e encontrar esses pontos "problemáticos", apontando para cada um a forma como os autores se defenderam. Peço também que vocês digam se acharam a argumentação dos autores convincente, ou se há algum problema que persiste e deixa vocês com desconfiança sobre os principais achados.
+
+
+## Tema 2. História de vida e seleção.
+
+**G2 responde, G5 comenta**
+
+Na aula passada discutimos o paper do Romiguier, com seu foco na história de vida e "eventos históricos". Na aula de hoje, o tema é o papel da seleção natural sobre a diversidade genética.
+
+Você acha possível conectar os achados de cada um desses estudos? Há temas em comum entre  os dois? Nós até perguntamos ao Tim Sackton, autor do paper que estamos discutindo, se ele via possíveis relações entre o seu trabalho e o de Romiguier e colaboradores. Antes de ler a resposta dele, peço que você proponha a sua. Há relação entre os papers? Como você imagina que ele responderia a questão (reproduzida abaixo)?
+
+``In your work you used proxies such as body size and species range to infer Nc which, in turn, is informative about Ne (and therefore the effects of linked selection). Recent research has shown that life-history traits related to the classical r/K strategies (including body size and propagule size) explain a lot of the neutral variation (https://doi.org/10.1038/nature13685). In light of this result, do you think the r/K strategy could provide a better estimate for the impact of selection instead of, or in addition to, body and range size?'
+
+Uma dica. Uma forma muito útil de abordar a relação entre esses dos dois papers que vimos está expresso na figura 2 de Ellegren e Galtier. Baseado em nossas discussões desses trabalho, você acha que a figura capta todos os processos/determinantes da diversidade genética? Você acrescentaria ou modificaria algo nessa figura?
+
+##Tema 3: Porque isso importa?
+
+**G3 responde, G4 comenta**
+
+O trabalho de Corbett-Detig e colaboradores tem um achado principal, que eles reiteram de modo muito recorrente e enfático. Peço que você expresse, em suas próprias palavras e do modo mais acessível que puder, qual é essa principal conclusão.
+
+Agora vem a parte mais desafiadora. Peço que você assuma que esse achado está correto, e diga qual é a relevância dele. Quando pensamos, num contexto de ciência, qual a "relevância" de um achado, uma pergunta boa diz respeito ao seu impacto sobre outros conhecimentos vigentes. Ou seja, como esse resultado influencia a nossa visão de mundo sobre diversidade genética, processos evolutivos? Quais as consequências desses achados?
+
+
 
 
 
