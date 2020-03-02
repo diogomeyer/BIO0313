@@ -3,13 +3,13 @@ title: "Biologia Evolutiva (BIO 0313)"
 author: "Diogo Meyer"
 date: "2/28/2020"
 output:
+  pdf_document:
+    number_sections: yes
+    toc: yes
   html_document:
     number_sections: yes
     toc: yes
     toc_float: yes
-  pdf_document:
-    number_sections: yes
-    toc: yes
 ---
 
 # Deriva, teoria neutra e tamanho efetivo populacional.
@@ -21,7 +21,7 @@ Neste documento retomo alguns conceitos que serão fundamentais no restante do c
 
 1. Para começar, defina em suas próprias palavras o que é a deriva genética, e quais seus efeitos sobre a diversidade genética dentro de populações, assim como sobre as diferenças entre populações.
 
-2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela _não ocorresse_. Uma dessas condições seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário possível, bastante extremo mas bem interessante. Imagine uma população tivesse $N$ indivíduos diploides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham _exatamente_ dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? 
+2. Uma forma de se compreender deriva genética é pensar quais seriam as condições necessárias para que ela _não ocorresse_. Uma dessas condições seria o caso de uma população de tamanho infinito. Agora considere um segundo cenário possível, bastante extremo mas bem interessante. Imagine uma população tivesse $N$ indivíduos diploides, sendo exatamente metade deles machos e metade fêmeas, formando $N/2$ casais. Imagine que todos esses casais tenham _exatamente_ dois filhos, e que após o nascimento dos filhos os pais morressem (tornando esse um modelo de "gerações discretas"). Esse cenário garante a ausência de deriva genética? [TIRAR]
 
 3. Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutas descritas por Hedrick no capítulo indicado. Suponha que ao sequenciar um gene, você descobre que todos indivíduos são geneticamente idênticos. Um colega sugere que houve seleção atuando sobre aquele gene, que fixou uma versão favorável em todos indivíduos. Como distinguir entre essa hipótese seletiva e a alternativa, que é a de que essa espécie sofreu deriva genética intensa, assim explicando a baixa variação naquele gene?
 
@@ -29,7 +29,7 @@ Neste documento retomo alguns conceitos que serão fundamentais no restante do c
 
 Um importante resultado da teoria neutra é que, num modelo apenas com deriva, a chance de uma mutação se fixar depende apenas de sua frequência na população. Tente justificar esse resultado.
 
-Assumindo esse achado, mutações recém surgidas em populações grandes seriam mais "raras", e teriam menos chances de se fixar do que quando ocorrem em populações pequenas. A previsão seria então a de que as taxas de evolução (dada pela taxa com que mutações surgem e se fixam) deveriam ser maior em populações pequenas (pois as mutações recém surgidas tem uma chance maior de se fixar). Esse raciocínio está correto? Como a sua resposta influencia o desenvolvimento de testes sobre a validade da teoria neutra na natureza?
+Assumindo esse achado, mutações recém surgidas em populações grandes seriam mais "raras", e teriam menos chances de se fixar do que quando ocorrem em populações pequenas. A previsão seria então a de que as taxas de evolução (dada pela taxa com que mutações surgem e se fixam) deveriam ser maior em populações pequenas (pois as mutações recém surgidas tem uma chance maior de se fixar). Esse raciocínio está correto? Como a sua resposta influencia o desenvolvimento de testes sobre a validade da teoria neutra na natureza? [Tirar pois o relógio molecular é pouco usado.]
 
 ## Taxa de heterozigose e sua dinâmica
 
@@ -42,6 +42,8 @@ Onde $f_A$ é a frequência do alelo $A$. O valor de $H$ pode ser interpretado c
 A dinâmica temporal da mudança de $H$ sob deriva é dada por:
 
 $$H_{t+1} = H_t (1 - \frac{1}{2N})$$
+
+
 
 Essa expressão deixa claro que, quanto menor o valor de N, maior será a redução de diversidade genética numa  população.
 
@@ -117,9 +119,9 @@ $$ H_{eq} = \frac{4N\mu}{1 + 4N\mu} $$
 
 A intensidade da deriva genética depende do tamanho efetivo populacional. Relembre o conceito de tamanho efetivo, e explique quais fatores podem levá-lo a ser diferente do tamanho de censo de uma população.  
 
-O texto descreve uma situação em que o tamanho efetivo pode ser *maior* do que o tamanho de censo. Comente sobre esse cenário.
+O texto descreve uma situação em que o tamanho efetivo pode ser *maior* do que o tamanho de censo. Comente sobre esse cenário.[Tirar]
 
-Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas. Você acha que é preciso dizer que elas são todas "equivalentes" do ponto de vista genético?
+Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas. Você acha que é correto dizer que elas são todas "equivalentes" do ponto de vista genético? Qual propriedade evolutiva delas você prevê que será parecida? Quais serão diferentes?
 
 ![Populações com diferentes histórias demográficas. Em (A) a população mantém tamanho constante de 1818 indivíduos. Em (B) a população alterna fases de tamanho N=10,000 com outras, de igual duração, de  N=1,000. Em (C) alternam-se fases de N=5,000 e N=1,110. ](figs/gargalos.png)
 
@@ -129,6 +131,8 @@ Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma de
 Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer à mesma simulação usada acima. Para visualizar o efeito de gargalos sobre a trajetória temporal da diversidade genética, faça com que em dois ou três momentos (ao longo das 1500 gerações) o tamanho populacional seja reduzido para N=5 por uma geração. Qual o impacto desses gargalos sobre a diversidade genética?
 
 Baseado nesses resultados e em seu conhecimento sobre como diferentes espécies oscilam de tamanho ao longo do tempo, você acha que o tamanho efetivo de uma espécie, estimado a partir de dados genéticos, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecundidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
+
+[Código para ilustrar esse conceito]
 
 
 ## Deriva e teoria da coalescência
