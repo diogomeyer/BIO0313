@@ -3,13 +3,13 @@ title: "Biologia Evolutiva (BIO 0313)"
 author: "Diogo Meyer"
 date: "3/02/2020"
 output:
-  pdf_document:
-    number_sections: yes
-    toc: yes
   html_document:
     number_sections: yes
     toc: yes
     toc_float: yes
+  pdf_document:
+    number_sections: yes
+    toc: yes
 ---
 
 # Deriva, teoria neutra e tamanho efetivo populacional.
