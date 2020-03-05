@@ -56,9 +56,13 @@ Para fazer as simulações abra o programa "Rstudio" e cole o código nele, e en
 Os parâmetros que podem ser alterados, e seus possíveis tamanhos inicias, são exemplificados a seguir.
 
 N0 <- 500       # Tamanho da população sem gargalo. 
+
 Ng <- 15        # Tamanho da população com gargalo. Explore diferentes valores.
+
 tempo_sg <- 290  # número de geraões sem gargalo. 
+
 tempo_cg <- 10   # número de gerações com gargalo. É mais realista manter gargalos curtos.
+
 numero_g <- 5    # número de gargalos. 
 
 Use essa exploração dos resultados para discutir de que forma garagalos populacinais relativamente curtos podem impactar a diversidade genética de uma população. Você acha que o tamanho efetivo de uma espécie, estimado a partir da diversidade genética, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecundidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
