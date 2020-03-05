@@ -19,30 +19,49 @@ Neste documento retomo alguns conceitos que serão fundamentais no restante do c
 
 ## O que é deriva genética?
 
-No texto sobre deriva de Hedrick vimos dois aspectos da deriva genética: por um lado há ênfase de que é um processo imprevisível, aleatório (repare em sua figura 2). Por outro, há fórmulas que mostram como a diveresidade genética deve diminuir ao longo do tempo. Mas se estamos diante de um processo aleatório, que é imprevisível, como é possível fazer uma previsão sobre como a diversidade muda ao longo do tempo?
+No texto sobre deriva de Hedrick vimos dois aspectos da deriva genética: por um lado há ênfase de que é um processo aleatório (repare em sua figura 2). Por outro, há fórmulas que mostram como a diveresidade genética deve diminuir ao longo do tempo. Mas se estamos diante de um processo aleatório, que é imprevisível, como é possível fazer uma previsão sobre como a diversidade muda ao longo do tempo?
 
 ## Interpretando tamanhos efetivos
 
-Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas usando a fórmula apropriada, baseada na média harmônica. Olhando o seu resultado, reflita: afinal de contas, essas populações tem propriedades evolutivas ou semelhantes?
+Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas usando a fórmula apropriada, baseada na média harmônica. Olhando o seu resultado, reflita: afinal de contas, essas populações tem propriedades evolutivas ou semelhantes? Você espera que elas tenham trajetórias evolutivas similares ou diferentes?
 
 ![Populações com diferentes histórias demográficas. Em (A) a população mantém tamanho constante de 1818 indivíduos. Em (B) a população alterna fases de tamanho N=10,000 com outras, de igual duração, de  N=1,000. Em (C) alternam-se fases de N=5,000 e N=1,110. ](figs/gargalos.png)
 
 
 ## Deriva ou seleção?
 
-Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutas descritas por Hedrick no capítulo indicado. Suponha que ao sequenciar um gene, você descobre que todos indivíduos são geneticamente idênticos. Um colega sugere que houve seleção atuando sobre aquele gene, que fixou a versão vantajosa em todos indivíduos. Outro colega adverte: pode ser que os peixes tenham passado por um gargalo ao colonizar o lago, e por serem descendentes de um único ancestral, há baixíssima variação genética.  Como distinguir entre a hipótsese seletiva e a alternativa, que é baseada num argumento demográfico?
+Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutas descritas por Hedrick no capítulo indicado. Ao sequenciar um gene específico, você descobre que todos indivíduos são geneticamente idênticos.
+
+Um colega sugere que houve seleção atuando sobre o gene, que fixou a versão vantajosa em todos indivíduos. Já outro colega adverte: pode ser que os peixes tenham passado por um gargalo ao colonizar o lago, e por serem descendentes de um único ancestral, há baixíssima variação genética. Os dois argumentos são bastante razoáveis, e constituem explicações plausíveis para o gene desprovido de variação. 
+
+Proponha uma estratégia para distinguir entre a hipótsese seletiva e a alternativa, segundo a qual é a deriva que explica a ausência de variação.
 
 ## Tamanho populcional prevê a diversidade genética?
 
-A teoria de genética de populações diz que $H_{eq} = \frac{4N\mu}{1 + 4N\mu}$. Isso parece muito útil: sugere que diferenças em H entre espécies são informativas sobre diferenças em N. Implica que simplesmente estimando $H$, podemos falar algo sobre o N da população. Será que essa relação é bem comportada assim?
+A teoria de neutra diz que $H_{eq} = \frac{4N\mu}{1 + 4N\mu}$. Isso parece muito útil: sugere que diferenças em H entre espécies são informativas sobre diferenças em N. Isso implica que simplesmente estimando $H$, podemos falar algo sobre o N da população. 
 
-Uma forma de testar a relação de proporcionalidade entre H e N é comparando os valores de H para várias espécies diferentes, que possuem tamanhos populacionais distintos.  Se você fosse fazer uma previsão de quais grupos taxonômicos devem ter N maior, e consequentemente possuir maiores diversidades, quais seriam? E quais você prevê que deveriam ter N e H menor?
+Não é fácil estimar o N de uma espécie, até mesmo porque não sabemos de quantas populações ela é constituída ou quais os limites da população. Em alguns casos mal sabemos qual o limte da espécie! 
+
+Diante dessa dificuldade, proponha alguma estratégia para testar a hipótese de que há uma proporcinalidade entre N e H. Você pode propor uma abordagem que utiliza as mais variadas fontes de dados, sem limitação de recursos.
+
 
 ## Gargalos genéticos
 
-Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer a uma simulação em R. Para visualizar o efeito de gargalos sobre a trajetória temporal da diversidade genética, faça com que em dois ou três momentos (ao longo das 1500 gerações) o tamanho populacional seja reduzido para N=5 por uma geração. Qual o impacto desses gargalos sobre a diversidade genética?
+Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Eles podem resultar de catástrofes ambientais (secas, fogos, enchentes). Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer  simulações em R, usando o código abaixo. 
 
-Baseado nesses resultados e em seu conhecimento sobre como diferentes espécies oscilam de tamanho ao longo do tempo, você acha que o tamanho efetivo de uma espécie, estimado a partir de dados genéticos, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecundidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
+Para visualizar o efeito de gargalos sobre a trajetória temporal da diversidade genética, vamos usar um programa que combina os efeitos da deriva e da mutação, para prever como a diversidade genética muda entre duas gerações. Usando o código disponível abaixo, altere o número de gargalos populacionais, as suas durações e intesidades, para ver de que forma a diversidade genética é alterada, quando comparada a uma população que não passou por gargalos. 
+
+Para fazer as simulações abra o programa "Rstudio" e cole o código nele, e então selecione-o e aperte em "Run". O gráfico deverá ser gerado automaticamente. 
+
+Os parâmetros que podem ser alterados, e seus possíveis tamanhos inicias, são exemplificados a seguir.
+
+N0 <- 500       # Tamanho da população sem gargalo. 
+Ng <- 15        # Tamanho da população com gargalo. Explore diferentes valores.
+tempo_sg <- 290  # número de geraões sem gargalo. 
+tempo_cg <- 10   # número de gerações com gargalo. É mais realista manter gargalos curtos.
+numero_g <- 5    # número de gargalos. 
+
+Use essa exploração dos resultados para discutir de que forma garagalos populacinais relativamente curtos podem impactar a diversidade genética de uma população. Você acha que o tamanho efetivo de uma espécie, estimado a partir da diversidade genética, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecundidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
 
 
 ## Um modelo em genética de populações: como a deriva e a mutação moldam a diversidade genética.
@@ -88,38 +107,7 @@ Pode-se também usar fórmula para a diferença de H entre duas gerações:
 
 $$\Delta H  = -\frac{H}{2N} + (1-H)2 \mu$$
 
-Podemos usar um programa de planilhas (ou outra linguagem de programação) para ilustrar a trajetória temporal da diversidade genética de uma população com os seguintes parâmetros: 
-
-$N=500; \mu = 10^{-3}$; $H$ inicial $H=0.3$
-$N=500; \mu = 10^{-3}$; $H$ inicial $H=0.8$
-
-Faça uma simulação para um período total de 1500 gerações.
-
-Se você souber usar R (implementando, por exemplo, no Rstudio), pode usar o seguinte código:
-
-```
-# Função para calcular como H muda ao longo do tempo
-
-# Função que calcula mudança de H entre duas gerações
-H.prime <- function(H, N, u) { H - H/(2*N) + (1-H)*2*u}
-
-# Função que calcula H de equilíbrio
-H.eq <- function(N, u) {4*N*u / (4*N*u + 1)}
-
-res <- vector(); 
-t <- 1500 # número de gerações
-res[1] <- 0.2 # H inicial
-N <- 500 # Tamanho da população
-u <- 10^-3 # Taxa de mutação
-
-# Mostrar trajetória
-for(i in 2:t) {res[i] <- H.prime(res[i-1], N, u)}
-plot(res)
-abline(h=H.eq(N, u))
-
-```
-
-Repare que a trajetória de $H$ tende a se estabilizar após um tempo. Isso ocorre quando atinge-se um valor de $H$ para o qual o ganho de diversidade por mutação é exatamente equilibrado pela sua perda por deriva. Esse valor é chamado de *taxa de heterozigose de equilíbrio* ($H_{eq}$).
+A trajetória de $H$ tende a se estabilizar após um tempo. Isso ocorre quando atinge-se um valor de $H$ para o qual o ganho de diversidade por mutação é exatamente equilibrado pela sua perda por deriva. Esse valor é chamado de *taxa de heterozigose de equilíbrio* ($H_{eq}$).
 
 Para calcular $H_{eq}$ temos que achar o valor em que os efeitos de mutação e deriva tem a mesma magnitude, ou seja:
 
@@ -131,8 +119,48 @@ $$ H_{eq} = \frac{4N\mu}{1 + 4N\mu} $$
 
 
 
+## Código em R para visualizar efeito de gargalos 
 
+O código abaixo permite gerar gráficos para gargalos de tamanho e duração definidos pelo usuário. Explore diferentes combinações de valores.
 
+```
+library(tidyverse) # carregando biblioteca
+# Função que calcula mudança de H entre duas gerações
+H.prime <- function(H, N, u) { H - H/(2*N) + (1-H)*2*u}
+# Função que calcula H de equilíbrio
+H.eq <- function(N, u) {4*N*u / (4*N*u + 1)}
+H1 <- vector();   # criando vetor
+H2 <- vector();   # criando vetor
+HNe <- vector();  # criando vetor
+############################## Parâmetros ######################################
+H1[1] <- 0.2    # H inicial
+H2[1] <- 0.2    # H inicial
+HNe[1] <- 0.2   # H inicial
+u <- 10^-3      # Taxa de mutação
+N0 <- 500       # Tamanho da população sem gargalo
+Ng <- 15        # Tamanho da população com gargalo
+tempo_sg <- 290  # número de geraões sem gargalo
+tempo_cg <- 10   # número de gerações com gargalo
+numero_g <- 5    # número de gargalos
+################################################################################
+# Calculando H's e N's
+t <-(tempo_sg+tempo_cg)*numero_g
+Nt <- rep(c(rep(N0,tempo_sg),rep(Ng,tempo_cg)),numero_g)
+Ne <- t/(sum(1/Nt))
+for(i in 2:t) {
+  H1[i] <- H.prime(H1[i-1], N, u)
+  H2[i]<- H.prime(H2[i-1], Nt[i], u)
+  HNe[i]<- H.prime(HNe[i-1], Ne, u)
+}
+# Montando a tabela de dados
+dat<-data.frame(rep(1:t,3),c(H1,H2,HNe),c(rep(N0,t),Nt,rep(Ne,t)),c(rep("s/garg",t),rep("c/garg",t),rep("c/garg_Ne",t)))
+dat <- dat %>%
+  rename(Geracoes = c(1),H = c(2),N = c(3),Pop = c(4))%>%
+  gather(-Geracoes,-Pop,key = "medida",value = "valor")
+# Mostrar trajetória
+ggplot(dat,aes(x=Geracoes,y=valor,color=Pop))+geom_line()+facet_wrap(~medida, scales = "free") + labs(y=NULL)
+
+```
 
 # Seleção Natural e sua interação com deriva
 
