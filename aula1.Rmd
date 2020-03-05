@@ -19,21 +19,28 @@ Neste documento retomo alguns conceitos que serão fundamentais no restante do c
 
 ## O que é deriva genética?
 
-1. No texto sobre deriva de Hedrick vimos dois aspectos da deriva genética: por um lado há ênfase de que é um processo imprevisível, aleatório (repare em sua figura 2). Por outro, há fórmulas que mostram como a diveresidade genética deve diminuir ao longo do tempo. Mas se estamos diante de um processo aleatório, que é imprevisível, como é possível fazer uma previsão sobre como a diversidade muda ao longo do tempo?
+No texto sobre deriva de Hedrick vimos dois aspectos da deriva genética: por um lado há ênfase de que é um processo imprevisível, aleatório (repare em sua figura 2). Por outro, há fórmulas que mostram como a diveresidade genética deve diminuir ao longo do tempo. Mas se estamos diante de um processo aleatório, que é imprevisível, como é possível fazer uma previsão sobre como a diversidade muda ao longo do tempo?
+
+## Interpretando tamanhos efetivos.
+
+Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas usando a fórmula apropriada, baseada na média harmônica. Olhando o seu resultado, reflita: afinal de contas, essas populações tem propriedades evolutivas ou semelhantes?
+
+![Populações com diferentes histórias demográficas. Em (A) a população mantém tamanho constante de 1818 indivíduos. Em (B) a população alterna fases de tamanho N=10,000 com outras, de igual duração, de  N=1,000. Em (C) alternam-se fases de N=5,000 e N=1,110. ](figs/gargalos.png)
+
 
 ## Deriva ou seleção?
 
-2. Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutas descritas por Hedrick no capítulo indicado. Suponha que ao sequenciar um gene, você descobre que todos indivíduos são geneticamente idênticos. Um colega sugere que houve seleção atuando sobre aquele gene, que fixou a versão vantajosa em todos indivíduos. Outro colega adverte: pode ser que os peixes tenham passado por um gargalo ao colonizar o lago, e por serem descendentes de um único ancestral, há baixíssima variação genética.  Como distinguir entre a hipótsese seletiva e a alternativa, que é baseada num argumento demográfico?
+Imagine que você está estudando uma espécie de peixe que habita um lago, como as trutas descritas por Hedrick no capítulo indicado. Suponha que ao sequenciar um gene, você descobre que todos indivíduos são geneticamente idênticos. Um colega sugere que houve seleção atuando sobre aquele gene, que fixou a versão vantajosa em todos indivíduos. Outro colega adverte: pode ser que os peixes tenham passado por um gargalo ao colonizar o lago, e por serem descendentes de um único ancestral, há baixíssima variação genética.  Como distinguir entre a hipótsese seletiva e a alternativa, que é baseada num argumento demográfico?
 
 ## Tamanho populcional prevê a diversidade genética?
 
-3. A teoria de genética de populações diz que $H_{eq} = \frac{4N\mu}{1 + 4N\mu}$. Isso parece muito útil: sugere que diferenças em H entre espécies são informativas sobre diferenças em N. Implica que simplesmente estimando $H$, podemos falar algo sobre o N da população. Será que essa relação é bem comportada assim?
+A teoria de genética de populações diz que $H_{eq} = \frac{4N\mu}{1 + 4N\mu}$. Isso parece muito útil: sugere que diferenças em H entre espécies são informativas sobre diferenças em N. Implica que simplesmente estimando $H$, podemos falar algo sobre o N da população. Será que essa relação é bem comportada assim?
 
 Uma forma de testar a relação de proporcionalidade entre H e N é comparando os valores de H para várias espécies diferentes, que possuem tamanhos populacionais distintos.  Se você fosse fazer uma previsão de quais grupos taxonômicos devem ter N maior, e consequentemente possuir maiores diversidades, quais seriam? E quais você prevê que deveriam ter N e H menor?
 
 ## Gargalos genéticos
 
-4. Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer a uma simulação em R. Para visualizar o efeito de gargalos sobre a trajetória temporal da diversidade genética, faça com que em dois ou três momentos (ao longo das 1500 gerações) o tamanho populacional seja reduzido para N=5 por uma geração. Qual o impacto desses gargalos sobre a diversidade genética?
+Gargalos genéticos são períodos em que o tamanho de uma população é drasticamente reduzido, dessa forma intensificando o processo de deriva genética. Para entendermos como a ocorrência de gargalos impacta a diversidade genética, vamos recorrer a uma simulação em R. Para visualizar o efeito de gargalos sobre a trajetória temporal da diversidade genética, faça com que em dois ou três momentos (ao longo das 1500 gerações) o tamanho populacional seja reduzido para N=5 por uma geração. Qual o impacto desses gargalos sobre a diversidade genética?
 
 Baseado nesses resultados e em seu conhecimento sobre como diferentes espécies oscilam de tamanho ao longo do tempo, você acha que o tamanho efetivo de uma espécie, estimado a partir de dados genéticos, é um bom preditor de características da espécie que determinam seu tamanho populacional a longo prazo (tais como sua fecundidade)? Ou será que é mais informativo sobre a ocorrência de eventos demográficos (como gargalos)?
 
