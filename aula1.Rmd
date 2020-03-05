@@ -128,6 +128,8 @@ $$ H_{eq} = \frac{4N\mu}{1 + 4N\mu} $$
 O código abaixo permite gerar gráficos para gargalos de tamanho e duração definidos pelo usuário. Explore diferentes combinações de valores.
 
 ```
+
+install.packages("tidyverse")
 library(tidyverse) # carregando biblioteca
 # Função que calcula mudança de H entre duas gerações
 H.prime <- function(H, N, u) { H - H/(2*N) + (1-H)*2*u}

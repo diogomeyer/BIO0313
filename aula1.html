@@ -290,7 +290,9 @@ div.tocify {
 <div id="codigo-em-r-para-visualizar-efeito-de-gargalos" class="section level2">
 <h2><span class="header-section-number">1.7</span> Código em R para visualizar efeito de gargalos</h2>
 <p>O código abaixo permite gerar gráficos para gargalos de tamanho e duração definidos pelo usuário. Explore diferentes combinações de valores.</p>
-<pre><code>library(tidyverse) # carregando biblioteca
+<pre><code>
+install.packages(&quot;tidyverse&quot;)
+library(tidyverse) # carregando biblioteca
 # Função que calcula mudança de H entre duas gerações
 H.prime &lt;- function(H, N, u) { H - H/(2*N) + (1-H)*2*u}
 # Função que calcula H de equilíbrio
