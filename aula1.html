@@ -314,7 +314,7 @@ t &lt;-(tempo_sg+tempo_cg)*numero_g
 Nt &lt;- rep(c(rep(N0,tempo_sg),rep(Ng,tempo_cg)),numero_g)
 Ne &lt;- t/(sum(1/Nt))
 for(i in 2:t) {
-  H1[i] &lt;- H.prime(H1[i-1], N, u)
+  H1[i] &lt;- H.prime(H1[i-1], N0, u)
   H2[i]&lt;- H.prime(H2[i-1], Nt[i], u)
   HNe[i]&lt;- H.prime(HNe[i-1], Ne, u)
 }
