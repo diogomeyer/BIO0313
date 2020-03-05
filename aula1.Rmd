@@ -21,7 +21,7 @@ Neste documento retomo alguns conceitos que serão fundamentais no restante do c
 
 No texto sobre deriva de Hedrick vimos dois aspectos da deriva genética: por um lado há ênfase de que é um processo imprevisível, aleatório (repare em sua figura 2). Por outro, há fórmulas que mostram como a diveresidade genética deve diminuir ao longo do tempo. Mas se estamos diante de um processo aleatório, que é imprevisível, como é possível fazer uma previsão sobre como a diversidade muda ao longo do tempo?
 
-## Interpretando tamanhos efetivos.
+## Interpretando tamanhos efetivos
 
 Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas usando a fórmula apropriada, baseada na média harmônica. Olhando o seu resultado, reflita: afinal de contas, essas populações tem propriedades evolutivas ou semelhantes?
 
