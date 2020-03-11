@@ -23,7 +23,7 @@ No texto sobre deriva de Hedrick vimos dois aspectos da deriva genética: por um
 
 ## Interpretando tamanhos efetivos
 
-Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas usando a fórmula apropriada, baseada na média harmônica. Olhando o seu resultado, reflita: afinal de contas, essas populações tem propriedades evolutivas ou semelhantes? Você espera que elas tenham trajetórias evolutivas similares ou diferentes?
+Considere três populações (A, B, C). Calcule o tamanho efetivo de cada uma delas usando a fórmula apropriada, baseada na média harmônica. Olhando o seu resultado, reflita: afinal de contas, essas populações tem propriedades evolutivas semelhantes? Você espera que elas tenham trajetórias evolutivas similares ou diferentes?
 
 ![Populações com diferentes histórias demográficas. Em (A) a população mantém tamanho constante de 1818 indivíduos. Em (B) a população alterna fases de tamanho N=10,000 com outras, de igual duração, de  N=1,000. Em (C) alternam-se fases de N=5,000 e N=1,110. ](figs/gargalos.png)
 
@@ -180,8 +180,6 @@ Use esse simulador para desenvolver uma intuição qualitativa sobre a relação
 
 Para uma população de tamanho N=20, faça uma série de simulações em que um dos alelos na população original tenha se fixado, e registre o tempo necessário para isso. Em média, quantas gerações foram necessárias?
 
-
-
 ## Modelo determinístico de seleção natural
 
 No texto "Theory of selection in populations", Kent Holsinger revisa o conceito básico de seleção natural e apresenta uma fórmula que prevê como a frequência de um alelo (dada por $p$) numa geração difere daquela da geração anterior, supondo que a seleção esteja ocorrendo. 
@@ -191,6 +189,8 @@ Usando a fórmula (1) apresentada no texto e um programa de planilhas (ou uma li
 (a) A mutação é vantajosa e recessiva (a vantagem só se faz presente quando duas cópias da mutação estão presentes, ou seja $W_{AA}$ > $W_{Aa}$ e $W_{AA} > W_{aa}$)
 
 (b) A mutação é vantajosa e dominante (indivíduos heterozigotos para a mutação têm o mesmo valor adaptativo, ou seja $W_{AA} = W_{Aa}$, e ambos são maiores que $W_{aa}$)
+
+(c) Explore o efeito de alterar a intensidade de seleção natural. Numa escala evolutiva, qual a sua impressão sobre a velocidade com que a seleção natural pode fixar uma mutação vantajosa?
 
 ## Modelo de seleção que incorpora deriva
 
@@ -202,7 +202,7 @@ Faça simulações para valores adaptativos de $W_{AA}=1,00; W_{Aa}=0,95; W_{aa}
 
 ## Probabilidade de fixação sob seleção e deriva genética
 
-Os padrões gerais vistos no exercício anterior foram investigados de modo analítico por J.B.S. Haldane (1982-1964) Motoo Kimura (1924-1994). Eles descobriram que a probabilidade de fixação de uma mutação vantajosa depende da intensidade de seleção que a favorece e também de sua frequência inicial. No caso especial em que a frequência inicial da mutação é $1/2N$ (o que equivale a dizer que ela está presente em uma só cópia, pois é "recém surgida", a fórmula é:
+Os padrões gerais vistos no exercício anterior foram investigados de modo analítico por J.B.S. Haldane (1982-1964) Motoo Kimura (1924-1994). Eles descobriram que a probabilidade de fixação de uma mutação vantajosa depende de três fatores: a intensidade de seleção que a favorece, o tamanho da população, e também de sua frequência inicial. No caso especial em que a frequência inicial da mutação é $1/2N$ (o que equivale a dizer que ela está presente em uma só cópia, pois é "recém surgida"), a fórmula para a probabilidade de fixação é:
 
 $P= \frac{1 - e^{-2s}}{1 - e^{-4Ns}}$ que para valores de $s$ relativamente baixos e $N$ elevado se aproxima de $2s$.
 
@@ -211,9 +211,11 @@ De posse desse resultado, considere uma mutação presente em uma única cópia,
 - uma mutação neutra;
 - uma mutação que confira uma vantagem de 1% (ou seja s=0,01). 
 
-Essa diferença faz sentido para você? Como a probabilidade de fixação no caso de seleção constrasta com o que vimos no modelo determinístico (em que não há deriva)?
+(a) Examine a probabilidade de fixação para o cenário neutro e o com seleçõa. Essa diferença faz sentido para você? Como a probabilidade de fixação no caso de seleção constrasta com o que vimos no modelo determinístico (em que não há deriva)?
 
-Agora imagine que essa mesma mutação vantajosa tivesse surgido numa população de tamanho N=50. Sua previsão para a diferença na probabilidade de fixação entre a mutação neutra e a vantajosa mudaria?
+(b) Dobre a vantagem associada à mutação, levando o valor para s=0,02, e calcule a nova probabilidade de fixação. O aumento da intensidade de seleção afetou a probabilidade de fixação?
+
+(c) Repita agora os dois itens acima (probabilidade de fixação para uma mutação neutra, uma com s=0,01, e uma com s=0,02), para uma população muito pequena, com N=5. O que mudou, em relação ao cenário de N=1000?
 
 ## Usando simulações para testar a teoria
 
@@ -221,18 +223,111 @@ Os resultados anteriores, referentes à probabilidade de fixação, podem ser te
 
 Utilize o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada. Lembre de ajustar a frequência inicial do alelo para $1/2N$, que corresponde à condição de haver apenas uma cópia do alelo presente na população. Para facilitar o exercício, simule casos em que $s=0,05$ com um tamanho populacional de N=100. Para cada réplica incluam um numero elevado de populações (por exemplo, 100) e registre o número que se fixou. Compare com o valor teórico esperado.
 
+[Deixar claro que N=50 indivíduos implica em N=100 na linguate do programa e 1/2N é 0,01 na frequencia inicial]
+
 ## Tempo até fixação
 
 Outro importante resultado teórico referente à trajetória de mutações diz respeito ao tempo médio que demora para uma mutação surgir e se fixar. Para uma mutação neutra o tempo médio até a fixação é $4N$ gerações. Já para mutações sob seleção, o tempo médio é dado por: $t_{fix} = \frac{2ln(2N_e)}{s}$, onde o $ln$ refere-se ao logaritmo na base natural.
 
-Utilizando essas expressões, compare o tempo médio até a fixação de uma mutação *neutra* que surge numa população de N=1000 indivíduos com o tempo até a fixação para uma mutação que confere vantagem de 1% (ou seja, s=0,01), também numa população de N=1000. A diferença nesses tempos dá alguma ideia sobre como podemos buscar identificar regiões do genoma que estiveram sob os efeitos de seleção natural? 
-
+Utilizando essas expressões, compare o tempo médio até a fixação de uma mutação *neutra* que surge numa população de N=1000 indivíduos com o tempo até a fixação para uma mutação que confere vantagem de 1% (ou seja, s=0,05), também numa população de N=1000. A diferença nesses tempos dá alguma ideia sobre como podemos buscar identificar regiões do genoma que estiveram sob os efeitos de seleção natural? 
 
 ## Pressupostos do modelo de seleção.
 
 O modelo de seleção natural que usamos em todas nossas modelagem nesta aula faz uma série de simplificações e assume uma série de pressupostos (isto é, condições que são necessárias para que o modelo possa funcionar). 
 
 Apresente esses pressupostos e avalie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
+
+## Código para simulações em R
+
+```
+################################################################################
+                          # INSTALANDO PACOTES #
+if("shiny" %in% rownames(installed.packages()) == FALSE) {install.packages("shiny")}
+if("rhandsontable" %in% rownames(installed.packages()) == FALSE) {install.packages("rhandsontable")}
+if("learnPopGen" %in% rownames(installed.packages()) == FALSE) {install.packages("learnPopGen")}
+                          # CARREGANDO PACOTES #
+library(shiny)
+library(rhandsontable)
+library(learnPopGen)
+################################################################################
+                      # RODANDO APLICACAO EM SHINY #
+{
+  w<-matrix(c("1.00","1.00","1.00"),1,3,dimnames=list(NULL,c("W(AA)","W(Aa)","W(aa)")))
+  ui <- fluidPage(
+    h3("Genetic drift & selection at a biallelic locus",align="center"),
+    sidebarLayout(
+      sidebarPanel(
+        sliderInput(inputId="p0",label="p0 (initial value of p):",value=0.5,min=0,max=1,
+                    step=0.001,round=3),
+        sliderInput(inputId="Ne",label="Ne (effective population size):",value=100,min=0,
+                    max=1000),
+        sliderInput(inputId="ngen",label="number of generations:",value=400,min=0,
+                    max=1000),
+        textInput(inputId="nrep",label="number of simulations:",value=5,width="80px"),
+        p(strong("Fitnesses:")),
+        rHandsontableOutput("w"),
+        checkboxInput(inputId="react",
+                      label="reactive (plot changes instantly with new parameter values)",
+                      value=FALSE),
+        checkboxInput(inputId="theoretic",
+                      label="superimpose theoretical expectation",value=FALSE),
+        textInput(inputId="seed",
+                  label="set seed (optional)",value=""),
+        actionButton("newplot","new plot"),
+        h4("Instructions:\n"),
+        p("This application simulates drift & natural selection on a biallelic locus.\n\n"),
+        h4("Details:\n"),
+        p("Web interface for drift.selection of the learnPopGen R package (Revell, 2019).")
+      ),
+      mainPanel(
+        plotOutput("plot",width="100%",height="500px")
+      )
+    )
+  )
+  server <- function(input, output) {
+    values=reactiveValues(w=w)
+    output$plot<-renderPlot({
+      if(input$ngen>0 && input$Ne>0){
+        if(input$seed!="") set.seed(as.numeric(input$seed))
+        par(mar=c(5.1,4.1,0.5,1.1))
+        if(!input$react){
+          input$newplot
+          isolate({
+            drift.selection(input$p0,input$Ne,w=as.numeric(values[["w"]]),
+                            ngen=input$ngen,nrep=as.numeric(input$nrep))
+            if(input$theoretic)
+              selection(input$p0,w=as.numeric(values[["w"]]),time=input$ngen,
+                        color=phytools::make.transparent("lightgrey",0.5),lwd=6,add=TRUE)
+          })
+        } else {
+          input$newplot
+          drift.selection(input$p0,input$Ne,w=as.numeric(values[["w"]]),
+                          ngen=input$ngen,nrep=as.numeric(input$nrep))
+          if(input$theoretic)
+            selection(input$p0,w=as.numeric(values[["w"]]),time=input$ngen,
+                      color=phytools::make.transparent("lightgrey",0.5),lwd=6,add=TRUE)
+        }
+      }
+    })
+    output$w = renderRHandsontable({
+      if (!is.null(input$w)) {
+        DF = hot_to_r(input$w)
+        values[["w"]] = DF
+        rhandsontable(DF)
+      } else if (!is.null(values[["w"]])) {
+        DF = values[["w"]]
+        rhandsontable(DF)
+      }
+    })
+  }
+  shinyApp(ui = ui, server = server)
+}
+
+
+
+```
+
+
 
 # Adaptação é limitada pela disponibilidade de mutações?
 
@@ -328,7 +423,7 @@ A primeira rodada de resultados está na figura 1, descrevendo mudanças de fitn
 
 ### Seguindo a trajetória de mutações específicas
 
-O que a trajetória de mutações específicas ao longo do tempo (Figura 2) revela sobre diferenças evolutivas entre formas sexuais e assexuais? Para essa análise, as frequências das mutações foram medidas. Como isso foi feito? Como foi feito o teste estatístico para comparar sexuais e assexuais (figuras 2i,j,k)?
+O que a trajetória de mutações específicas ao longo do tempo (Figura 2 do texto do Hedrick) revela sobre diferenças evolutivas entre formas sexuais e assexuais? Para essa análise, as frequências das mutações foram medidas. Como isso foi feito? Como foi feito o teste estatístico para comparar sexuais e assexuais (figuras 2i,j,k)?
 
 
 ### Medindo o fitness de mutações específicas
