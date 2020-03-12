@@ -235,7 +235,7 @@ Utilizando essas expressões, compare o tempo médio até a fixação de uma mut
 
 O modelo de seleção natural que usamos em todas nossas modelagem nesta aula faz uma série de simplificações e assume uma série de pressupostos (isto é, condições que são necessárias para que o modelo possa funcionar). 
 
-Apresente esses pressupostos e avalie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
+Discuta esses pressupostos e avalie se você acha que eles comprometem a utilidade do modelo. Por exemplo, discuta se o modelo assume algo biologicamente inverossímil, de modo que ao aceitar esse pressuposto estamos construindo um modelo que não se aplica a populações reais. Ou se, pelo contrário, os pressupostos são razoáveis para muitas populações que poderemos ter interesse em estudar.
 
 ## Código para simulações em R
 
