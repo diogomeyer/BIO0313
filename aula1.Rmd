@@ -223,7 +223,7 @@ Os resultados anteriores, referentes à probabilidade de fixação, podem ser te
 
 Utilize o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada. Lembre de ajustar a frequência inicial do alelo para $1/2N$, que corresponde à condição de haver apenas uma cópia do alelo presente na população. Para facilitar o exercício, simule casos em que $s=0,05$ com um tamanho populacional de N=100. Para cada réplica incluam um numero elevado de populações (por exemplo, 100) e registre o número que se fixou. Compare com o valor teórico esperado.
 
-[Deixar claro que N=50 indivíduos implica em N=100 na linguate do programa e 1/2N é 0,01 na frequencia inicial]
+N.B. Uma dica para ajudar na hora de parametrizar as simulações. O valor de N=50 indivíduos implica em N=100 na linguagem do programa, e 1/2N é 0,01 na frequencia inicial. Outro ponto importante é que a fórmula que usamos para a probabilidade de fixação assume que o heterozigoto tem um valor adaptativo exatamente intermediário entre os dois homozigotos.
 
 ## Tempo até fixação
 
